@@ -1,13 +1,17 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
-  # before_action :authorize
 
-  def current_donor
-    @current_donor ||= Donor.find(session[:donor_id])if session[:donor_id]
+  def current_user
+    if session[:donor_id]
+      @current_user||= Donor.find(session[:donor_id])
+    elsif session[:health_provider_id]
+      @current_user ||= HealthProvider.find(session[:health_provider_id])
+
+    end
   end
-  helper_method :current_donor
+  helper_method :current_user
 
   def authorize
-    redirect_to'/login' unless current_donor
+    redirect_to'/login' unless current_user
   end
 end

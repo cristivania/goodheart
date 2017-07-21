@@ -1,0 +1,57 @@
+<%= form_for @health_provider, url: '/health_providers' do |form| %>
+  <% if @health_provider.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(health_provider.errors.count, "error") %> prohibited this health_provider from being saved:</h2>
+
+      <ul>
+      <% health_provider.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= form.label :facility_name %>
+    <%= form.text_field :facility_name, id: :health_provider_facility_name, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :address %>
+    <%= form.text_field :address, id: :health_provider_address, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :email %>
+    <%= form.text_field :email, id: :health_provider_email, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :password %>
+    <%= form.password_field :password, id: :health_provider_password, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :password_confirmation %>
+    <%= form.password_field :password_confirmation, id: :health_provider_password_confirmation, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :webpage %>
+    <%= form.text_field :webpage, id: :health_provider_webpage, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :about_us %>
+    <%= form.text_area :about_us, id: :health_provider_about_us, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :phone %>
+    <%= form.text_field :phone, id: :health_provider_phone, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= form.submit "Submit", class: 'btn btn-success' %>
+  </div>
+<% end %>
