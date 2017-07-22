@@ -3,16 +3,17 @@ class SessionsController < ApplicationController
   end
 
   def create
-    donor = Donor.find_by_email(params[:email])
-    if donor && donor.authenticate(params[:password])
-      session[:donor_id]= donor.id
+    user = Donor.find_by_email(params[:email]) ||
+    HealthProvider.find_by_email(params[:email])
+    if user && user.authenticate(params[:password])
+      session[:user_id]= user.id
       redirect_to '/'
     else
       render :new
     end
   end
   def destroy
-    session[:donor_id]=nil
+    session[:user_id]=nil
     session[:health_provider_id]=nil
     redirect_to '/login'
   end

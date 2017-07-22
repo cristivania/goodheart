@@ -1,11 +1,11 @@
 <% if user_role(current_user) %>
-  <h1>Thank you for your good heart!</h1>
+  <h1><%= current_user.name %></h1>
 <% else %>
-  <h1>I'm a health provider</h1>
+  <h1><%= current_user.name %></h1>
 <% end %>
 
-  <%  if current_user.role == 'donor' %>
+  <!-- <%  if current_user.role == 'donor' %>
     <h1>Donor</h1>
   <% else %>
   <h1>Health Provider</h1>
-  <%end%>
+  <%end%> -->

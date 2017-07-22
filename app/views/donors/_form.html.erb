@@ -2,6 +2,7 @@
 <%= form_for @donor, url: '/donors' do |f| %>
 
   <%= render"error_messages",  target: @donor %>
+<div class="register-donor col-md-8  col-md-offset-2">
 
   <div class="form-group">
     <%= f.label :first_name %>
@@ -19,7 +20,7 @@
   </div>
 
   <div class="form-group">
-    <%= f.label :password %>
+    <%= f.label :password%>
     <%= f.password_field :password, class: 'form-control' %>
   </div>
 
@@ -42,7 +43,9 @@
     <%= f.label :bloodtype %>
     <%= f.text_field :bloodtype, class: 'form-control' %>
   </div>
-
-  <%= f.submit "Submit", class: 'btn btn-success' %>
+  <div class="button">
+    <%= f.submit "Submit", class: 'btn btn-danger submit' %>
+  </div>
+</div>
 
 <% end %>

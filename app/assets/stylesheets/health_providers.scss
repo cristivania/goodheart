@@ -1,3 +1,38 @@
 // Place all the styles related to the HealthProviders controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.r-side {
+  background-color: #D64938;
+  min-height: 1000px;
+  display:flex;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 250px;
+  color: white;
+}
+.r-side img {
+  border: dashed white;
+  border-radius: 45%;
+}
+.r-side h1{
+  font-weight: bold;
+  font-size: 30px
+}
+.r-side li {
+  font-size: 15px;
+  font-weight: lighter;
+}
+.m-side {
+  text-align: center;
+}
+
+.l-side {
+  padding-top: 40px;
+}
+
+.l-side p {
+  color: gray;
+  font-size: 30px;
+  font-weight: bold;
+  padding-bottom: 40px;
+}
