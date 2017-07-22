@@ -24,6 +24,10 @@
 font-weight: bold;
 }*/
 
+.button {
+  text-align: right;
+}
+
 body {
   font-family: 'Raleway';
 }

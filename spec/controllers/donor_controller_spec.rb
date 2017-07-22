@@ -1,5 +1,5 @@
-require 'rails_helper'
-
-RSpec.describe DonorController, type: :controller do
-
-end
+# require 'rails_helper'
+#
+# RSpec.describe DonorsController, type: :controller do
+#
+# end
