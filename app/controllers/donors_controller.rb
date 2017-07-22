@@ -9,6 +9,10 @@ class DonorsController < ApplicationController
     @donor = Donor.new
   end
 
+  def edit
+    @donor = Donor.find(params[:id])
+  end
+
   def create
     @donor = Donor.new(donor_params)
     if @donor.save
