@@ -1,24 +1,23 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+GoodHeart is a web application that matches donors with the blood needs of health providers. Using real time data, the web app notifies donors matching the blood type needed with nearby health providers using SMS messaging (Twilio). The donors are provided with a link to the location with GPS directions (Google Directions API) to the site. The web app also has data tracking capability that collects donor data and provides donor stats to health providers using live data tracking (HighCarts).
 
-Things you may want to cover:
+Application was buid in:
 
-* Ruby version
+* Ruby on Rails
 
-* System dependencies
+* PostgreSQL Database
 
-* Configuration
+* Bcrypt GEM
 
-* Database creation
+* Twilio GEM
 
-* Database initialization
+* Google Directions API
 
-* How to run the test suite
+* HTML and CSS
 
-* Services (job queues, cache servers, search engines, etc.)
+* Bootstrap
 
-* Deployment instructions
+* Javascript HighCharts
 
-* ...
+* Json
